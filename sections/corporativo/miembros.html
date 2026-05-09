@@ -1,0 +1,40 @@
+<div class="pane-head">
+  <div>
+    <h3>Lista de miembros</h3>
+    <p>Padrón consolidado de las tres congregaciones.</p>
+  </div>
+</div>
+<div class="toolbar">
+  <div class="left">
+    <div class="search-input">
+      <span style="color: var(--muted);">⌕</span>
+      <input id="memSearch" type="text" placeholder="Buscar por nombre o documento…" oninput="renderMiembros()">
+    </div>
+  </div>
+  <div class="right">
+    <select id="memFilter" onchange="renderMiembros()" style="padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 999px; background: rgba(255,255,255,0.6); font-family: 'Manrope', sans-serif; font-size: 0.85rem;">
+      <option value="todas">Todas las iglesias</option>
+      <option value="central">Central</option>
+      <option value="sayago">Sayago</option>
+      <option value="tacuarembo">Tacuarembó</option>
+    </select>
+            <span id="mem-count" style="font-size:0.82rem;color:var(--muted);align-self:center;"></span>
+            <button class="btn btn-outline btn-sm" onclick="exportarCSV()">↓ Exportar CSV</button>
+  </div>
+</div>
+<div class="table-wrap">
+  <table id="mem-table">
+    <thead>
+      <tr>
+        <th>Nº</th>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Iglesia</th>
+        <th>Rol</th>
+        <th>Estado</th>
+        <th>Ingreso</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
