@@ -1,0 +1,54 @@
+<div class="pane-head">
+  <div>
+    <h3>Contabilidad</h3>
+    <p>Movimientos por iglesia, en una base de datos única.</p>
+  </div>
+  <button class="btn btn-gold btn-sm" onclick="openMovModal()">+ Nuevo movimiento</button>
+</div>
+<div class="toolbar" style="margin-bottom: 8px;">
+  <div class="left">
+    <div class="search-input">
+      <span style="color: var(--muted);">⌕</span>
+      <input id="contSearch" type="text" placeholder="Buscar por concepto…" oninput="renderContabilidad()">
+    </div>
+  </div>
+  <div class="right">
+    <span id="cont-count" style="font-size:0.82rem;color:var(--muted);align-self:center;"></span>
+    <button class="btn btn-outline btn-sm" id="exportContCSV" onclick="exportarCSVContabilidad()">↓ Exportar CSV</button>
+  </div>
+</div>
+<div class="chip-row" id="cont-filter">
+  <button class="chip active" data-iglesia="todas">Todas las iglesias</button>
+  <button class="chip" data-iglesia="central">Central</button>
+  <button class="chip" data-iglesia="sayago">Sayago</button>
+  <button class="chip" data-iglesia="tacuarembo">Tacuarembó</button>
+</div>
+<div class="stats-grid" id="cont-stats">
+  <div class="stat">
+    <div class="label">Ingresos</div>
+    <div class="value" id="cont-ing" style="color: #2c7a3e;">$ 0</div>
+  </div>
+  <div class="stat">
+    <div class="label">Egresos</div>
+    <div class="value" id="cont-egr" style="color: #a8302d;">$ 0</div>
+  </div>
+  <div class="stat">
+    <div class="label">Saldo</div>
+    <div class="value" id="cont-sal">$ 0</div>
+  </div>
+</div>
+<div class="table-wrap">
+          <table id="cont-table">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Iglesia</th>
+                <th>Concepto</th>
+                <th>Tipo</th>
+                <th style="text-align:right;">Monto</th>
+                <th style="width:80px;"></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+</div>
