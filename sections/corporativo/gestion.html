@@ -1,0 +1,32 @@
+<div class="pane-head">
+  <div>
+    <h3>Gestión de miembros</h3>
+    <p>Alta, edición y baja de miembros del padrón.</p>
+  </div>
+  <button class="btn btn-gold btn-sm" onclick="openMemberModal()">+ Nuevo miembro</button>
+</div>
+<div class="toolbar">
+  <div class="left">
+    <div class="search-input">
+      <span style="color: var(--muted);">⌕</span>
+      <input id="gestSearch" type="text" placeholder="Buscar miembro…" oninput="renderGestion()">
+    </div>
+  </div>
+  <div class="right">
+    <span id="gest-count" style="font-size:0.82rem;color:var(--muted);align-self:center;"></span>
+  </div>
+</div>
+<div class="table-wrap">
+  <table id="gest-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Iglesia</th>
+        <th>Estado</th>
+        <th style="text-align:right;">Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
