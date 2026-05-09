@@ -1,0 +1,73 @@
+<div class="container content-section">
+  <div class="page-header">
+    <div class="section-eyebrow">Estamos para ti</div>
+    <h2>Contacto</h2>
+    <p class="lead">Comunícate con la dirección de la misión o con cualquiera de nuestras congregaciones locales.</p>
+  </div>
+
+  <div class="contacto-grid">
+    <div class="contact-info">
+      <div class="contact-block">
+        <h4>Dirección general</h4>
+        <p>Iglesia de Dios — Sede Central</p>
+        <p class="small">Montevideo, Uruguay</p>
+      </div>
+      <div class="contact-block">
+        <h4>Correo electrónico</h4>
+        <p>contacto@iglesiadedios.org.uy</p>
+        <p class="small">Respondemos en horario administrativo</p>
+      </div>
+      <div class="contact-block">
+        <h4>Teléfono</h4>
+        <p>+598 — — — — —</p>
+        <p class="small">Lunes a viernes, 9:00 a 17:00</p>
+      </div>
+      <div class="contact-block">
+        <h4>Iglesias locales</h4>
+        <p>Central · Sayago · Tacuarembó</p>
+        <p class="small">Cada congregación tiene su propio contacto pastoral.</p>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); mostrarToast('Mensaje enviado. Te responderemos pronto.'); this.reset();">
+      <h3 style="margin-bottom: 18px;">Envíanos un mensaje</h3>
+      <div class="form-grid">
+        <div class="field">
+          <label>Nombre</label>
+          <input type="text" required placeholder="Tu nombre">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" required placeholder="tu@email.com">
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="field">
+          <label>Asunto</label>
+          <select>
+            <option>Consulta general</option>
+            <option>Quiero conocer la misión</option>
+            <option>Consulta administrativa</option>
+            <option>Otros</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Iglesia más cercana</label>
+          <select>
+            <option>Sin preferencia</option>
+            <option>Central</option>
+            <option>Sayago</option>
+            <option>Tacuarembó</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" style="margin-top: 12px;">
+        <label>Mensaje</label>
+        <textarea required placeholder="Escribe aquí tu mensaje…"></textarea>
+      </div>
+      <div style="display: flex; justify-content: flex-end; margin-top: 18px;">
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+      </div>
+    </form>
+  </div>
+</div>
