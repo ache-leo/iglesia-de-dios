@@ -1,0 +1,46 @@
+<div class="container content-section">
+  <div class="page-header">
+    <div class="section-eyebrow">Administraci&oacute;n interna</div>
+    <h2>Corporativo</h2>
+    <p class="lead">Panel de gesti&oacute;n de la misi&oacute;n. Bienvenido, <strong id="dashNombre">&mdash;</strong>.</p>
+  </div>
+
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; padding: 20px; background: var(--cream); border: 1px solid var(--line); border-radius: 12px;">
+    <div style="flex: 1; min-width: 140px;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:4px;">Rol</div>
+      <div style="font-size:1.1rem;font-weight:600;color:var(--navy-deep);" id="dashRol">&mdash;</div>
+    </div>
+    <div style="flex: 1; min-width: 140px;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:4px;">Iglesia</div>
+      <div style="font-size:1.1rem;font-weight:600;color:var(--navy-deep);" id="dashIglesia">&mdash;</div>
+    </div>
+  </div>
+
+  <div class="admin-layout">
+    <aside class="admin-side">
+      <h4>Gesti&oacute;n</h4>
+      <button class="active" data-pane="resumen" onclick="showPane('resumen')">
+        <span class="ico">&#9674;</span><span>Resumen</span>
+      </button>
+      <button data-pane="contabilidad" onclick="showPane('contabilidad')">
+        <span class="ico">$</span><span>Contabilidad</span>
+      </button>
+      <button data-pane="miembros" onclick="showPane('miembros')">
+        <span class="ico">&#9776;</span><span>Lista de miembros</span>
+      </button>
+      <button data-pane="gestion" onclick="showPane('gestion')">
+        <span class="ico">+</span><span>Gesti&oacute;n de miembros</span>
+      </button>
+      <button data-pane="carnets" onclick="showPane('carnets')">
+        <span class="ico">&#9633;</span><span>Carnets</span>
+      </button>
+      <button data-pane="usuarios" onclick="showPane('usuarios')" style="display:none;">
+        <span class="ico">&#9881;</span><span>Usuarios</span>
+      </button>
+    </aside>
+
+    <div class="admin-main">
+      <!-- Los paneles se cargan automaticamente con showPane() -->
+    </div>
+  </div>
+</div>
