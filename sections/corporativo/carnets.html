@@ -1,0 +1,38 @@
+<div class="pane-head">
+  <div>
+    <h3>Gestión de carnets</h3>
+    <p>Vista previa e impresión de carnets de miembro.</p>
+  </div>
+</div>
+<div class="form-grid" style="max-width: 560px;">
+  <div class="field">
+    <label>Seleccionar miembro</label>
+    <select id="carnetSelect"></select>
+  </div>
+</div>
+<div id="carnetWrap">
+  <div class="carnet" id="carnetPreview">
+    <div class="carnet-head">
+      <div class="carnet-mark"></div>
+      <div class="carnet-title">Iglesia de Dios<small>Carnet de miembro</small></div>
+    </div>
+    <div class="carnet-body">
+      <div class="carnet-name" id="cName">—</div>
+      <div class="carnet-role" id="cRole">—</div>
+      <div class="carnet-info">
+        <div><div class="lbl">Documento</div><div class="val" id="cDoc">—</div></div>
+        <div><div class="lbl">Congregación</div><div class="val" id="cCong">—</div></div>
+        <div><div class="lbl">Ingreso</div><div class="val" id="cIng">—</div></div>
+        <div><div class="lbl">Vigencia</div><div class="val" id="cVig">—</div></div>
+      </div>
+    </div>
+    <div class="carnet-foot">
+      <span>Misión Evangélica</span>
+      <span class="carnet-id" id="cId">N° 0001</span>
+    </div>
+  </div>
+  <div class="carnet-tools">
+            <button class="btn btn-outline btn-sm" onclick="window.print()">⎙ Imprimir</button>
+            <button class="btn btn-gold btn-sm" onclick="descargarCarnet()">↓ Descargar / Imprimir</button>
+  </div>
+</div>
